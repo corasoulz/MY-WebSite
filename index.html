@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cora's Web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">CoraSoulz</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="https://mail.google.com/mail/u/1/#inbox?compose=new">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Welcome to corasoulz Website</h1>
+    <br />
+    <p>This is my website, Here you can find about my info and what am do for living.</p>
+    <p>Here some of my Social media accounts.</p>
+    <a href="https://github.com/corasoulz">My GitHub</a>
+    <a href="https://www.instagram.com/corasoul_a/?next=%2F">My Instagram</a>
+    <br />
+    <h3>Some online videos which can help you to understand programming</h3>
+    <a href="https://www.youtube.com/watch?v=vymJMn97wks">Python Video</a>
+    <a href="https://www.youtube.com/watch?v=LwL9EbrEue8">Programming Help</a>
+  </main>
+
+  <!-- optional JS to toggle mobile menu -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

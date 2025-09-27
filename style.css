@@ -1,0 +1,177 @@
+/* Basic Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9; /* Light background for contrast */
+}
+
+/* --- Header and Navigation Styles --- */
+header {
+    background-color: #2c3e50; /* Dark blue/charcoal header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    min-height: 60px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    color: #ecf0f1; /* Light logo text */
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3498db; /* Bright blue hover effect */
+}
+
+/* --- Main Content Styles --- */
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow */
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #3498db;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* --- Link Styles (Social Media/Videos) --- */
+main a {
+    display: inline-block;
+    background-color: #3498db; /* Primary button color */
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 8px 10px 15px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+}
+
+main a:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* --- Responsive Design (Mobile First) --- */
+
+/* Hamburger Menu (Hidden on Desktop, Shown on Mobile) */
+.hamburger {
+    display: none; /* Hide by default */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ecf0f1;
+    border-radius: 3px;
+    transition: all 0.3s linear;
+}
+
+
+@media (max-width: 768px) {
+    /* Show hamburger icon and hide regular menu */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Under the header */
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1000;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* When 'open' class is added by JavaScript */
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Hamburger to 'X' animation */
+    .hamburger.open span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.open span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    main {
+        margin: 20px;
+        padding: 20px;
+    }
+}
